@@ -15,10 +15,16 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/state=done:pathMatch(.*)*',
-      redirect: '/'
+      path: '/state=done&:pathMatch(.*)*',
+      redirect: to => {
+        const urlParams = new URLSearchParams(to.params.pathMatch[0]);
+        const access_token = urlParams.get('access_token');
+        localStorage.setItem("access_token", access_token);
+        return { path: '/' }
+      },
     },
   ]
 })
 
 export default router
+
