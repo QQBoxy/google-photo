@@ -33,5 +33,3 @@ onMounted(() => {
 </template>
 
 <style></style>
-
-https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/photoslibrary&include_granted_scopes=true&response_type=token&state=done&redirect_uri=https://qqboxy.github.io&client_id=764000446997-oh1jnp47hbkgllc5280rjevgedlhvvdc.apps.googleusercontent.com
